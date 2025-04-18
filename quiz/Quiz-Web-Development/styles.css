@@ -1,0 +1,193 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+section {
+    margin: 16px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f4f7fb;
+  }
+  
+  .header {
+    width: 100%;
+    max-width: 600px;
+    margin: 32px auto 16px; 
+    background: linear-gradient(135deg, #7f0fe7, #a855f7); 
+    padding: 24px;
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .header h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+
+  .header .search-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .header .search-container input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header .search-container input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(127, 15, 231, 0.3); 
+    background: #ffffff;
+  }
+  
+  .header .search-container input::placeholder {
+    color: #9ca3af; 
+  }
+  
+  /* Add task container */
+  .header .add-container {
+    display: flex;
+    gap: 8px; 
+  }
+  
+  .header .add-container input {
+    width: 75%;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header .add-container input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(127, 15, 231, 0.3);
+    background: #ffffff;
+  }
+  
+  .header .add-container input::placeholder {
+    color: #9ca3af;
+  }
+  
+  .header .add-container span.addBtn {
+    width: 25%;
+    padding: 12px;
+    background: #ffffff;
+    color: #7f0fe7; 
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header .add-container span.addBtn:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+  }
+  
+  
+  .todo {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .todo ul {
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 16px 16px 16px 48px;
+    background: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    list-style-type: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .todo ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .todo ul li:nth-child(odd) {
+    background: #f8fafc;
+  }
+  
+  .todo ul li:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+  }
+  
+  .todo ul li.checked {
+    background: #4b5563;
+    color: #ffffff;
+    text-decoration: line-through;
+  }
+  
+  .todo ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 14px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 12px;
+    width: 6px;
+  }
+  
+  .close {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .close:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-radius: 6px;
+  }
